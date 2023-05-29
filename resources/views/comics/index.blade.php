@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
 
-        <h3>Comics list</h3>
+        <h3 class="m-4 text-center">Comics list</h3>
 
         <table class="table">
             <thead>
@@ -12,6 +12,8 @@
                     <th scope="col">Description</th>
                     <th scope="col">Price</th>
                     <th scope="col">Series</th>
+                    <th scope="col">Details</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -22,6 +24,8 @@
                         <td>{{ $comic->description}}</td>
                         <td>{{ $comic->price }}</td>
                         <td>{{ $comic->series }}</td>
+                        <td><a href="{{ route('comic.show', $comic->id )}}">Details</a></td>
+
                     </tr>
                 @endforeach
 
