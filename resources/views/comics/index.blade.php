@@ -25,14 +25,14 @@
                         <td>{{ $comic->price }}</td>
                         <td>{{ $comic->series }}</td>
                         <td>
-                            <a href="{{ route('comic.show', $comic->id )}}">Details</a>
-                            <a href="{{ route('comic.create', $comic->id )}}">Add</a>
-                            <a href="{{ route('comic.edit', $comic->id )}}">Edit</a>
+                            <a class="btn btn-primary m-1" href="{{ route('comic.show', $comic->id )}}">Details</a>
+                            <a class="btn btn-success m-1" href="{{ route('comic.create', $comic->id )}}">Add</a>
+                            <a class="btn btn-warning m-1" href="{{ route('comic.edit', $comic->id )}}">Edit</a>
                             
                             <form  action="{{ route('comic.destroy', $comic->id) }}" method="POST">
                                 @method('DELETE')
                                 @csrf
-                                <button type="submit" class="btn btn-danger mt-2" >
+                                <button type="submit" class="btn btn-danger mt-1" >
                                    Delete
                                 </button>
                             </form>
