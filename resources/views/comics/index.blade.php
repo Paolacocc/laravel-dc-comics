@@ -24,7 +24,12 @@
                         <td>{{ $comic->description}}</td>
                         <td>{{ $comic->price }}</td>
                         <td>{{ $comic->series }}</td>
-                        <td><a href="{{ route('comic.show', $comic->id )}}">Details</a></td>
+                        <td>
+                            <a href="{{ route('comic.show', $comic->id )}}">Details</a>
+                            <a href="{{ route('comic.create', $comic->id )}}">Edit</a>
+                        
+                        
+                        </td>
 
                     </tr>
                 @endforeach
