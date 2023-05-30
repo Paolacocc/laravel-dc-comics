@@ -28,6 +28,14 @@
                             <a href="{{ route('comic.show', $comic->id )}}">Details</a>
                             <a href="{{ route('comic.create', $comic->id )}}">Add</a>
                             <a href="{{ route('comic.edit', $comic->id )}}">Edit</a>
+                            
+                            <form  action="{{ route('comic.destroy', $comic->id) }}" method="POST">
+                                @method('DELETE')
+                                @csrf
+                                <button type="submit" class="btn btn-danger mt-2" >
+                                   Delete
+                                </button>
+                            </form>
                         
                         
                         </td>
