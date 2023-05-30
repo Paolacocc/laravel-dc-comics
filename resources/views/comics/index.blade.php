@@ -26,7 +26,7 @@
                         <td>{{ $comic->series }}</td>
                         <td>
                             <a href="{{ route('comic.show', $comic->id )}}">Details</a>
-                            <a href="{{ route('comic.create', $comic->id )}}">Edit</a>
+                            <a href="{{ route('comic.create', $comic->id )}}">Add</a>
                         
                         
                         </td>

@@ -42,7 +42,7 @@ class ComicsController extends Controller
         $comic->fill($data);
         $comic->save();
 
-        return redirect()->route('comics.index');
+        return redirect()->route('comic.index');
     }
 
     /**
