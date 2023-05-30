@@ -25,6 +25,7 @@
             <label for="price" class="form-label">price</label>
             <input type="text" class="form-control" id="price" name="price">
         </div>
+        
         <div class="mb-3">
             <label for="series" class="form-label">Series</label>
             <input type="text" class="form-control" name="series" id="series">
