@@ -3,7 +3,9 @@
 @section('content')
     <div class="container">
 
-        <h3 class="m-4 text-center">Comics list</h3>
+        <h3 class=" text-center m-4">COMICBOOKS LIST:</h3>
+
+        <a class="btn btn-success  m-4 d-flex justify-content-center" href="{{ route('comic.create')}}">Add a new comic book</a>
 
         <table class="table">
             <thead>
@@ -26,7 +28,7 @@
                         <td>{{ $comic->series }}</td>
                         <td>
                             <a class="btn btn-primary m-1" href="{{ route('comic.show', $comic->id )}}">Details</a>
-                            <a class="btn btn-success m-1" href="{{ route('comic.create', $comic->id )}}">Add</a>
+                            
                             <a class="btn btn-warning m-1" href="{{ route('comic.edit', $comic->id )}}">Edit</a>
                             
                             <form  action="{{ route('comic.destroy', $comic->id) }}" method="POST">
